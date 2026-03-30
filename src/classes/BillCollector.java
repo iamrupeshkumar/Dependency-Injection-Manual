@@ -10,6 +10,12 @@ public class BillCollector {
 		this.payment = payment;
 	}
 	
+	public BillCollector() {}
+	
+	public BillCollector(IPayment payment) {
+		this.payment=payment;
+	}
+	
 	public void payBill(double amount) {
 		String status = payment.pay(amount);
 		System.out.println(status);
